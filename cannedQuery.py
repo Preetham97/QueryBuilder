@@ -2,7 +2,6 @@
 """
 Created on Wed Mar 25 15:41:00 2020
 
-@author: aaiyer
 """
 
 '''from flask_mysqldb import MySQL
@@ -70,6 +69,3 @@ def about():
 
 if __name__ == '__main__':
     app.run()
-    
-    #aaiyer
-    #abc123/stony
