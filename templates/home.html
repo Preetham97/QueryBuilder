@@ -21,16 +21,16 @@
 			</div>
 			<div class="row">
 				<label class="control-label" for="ourField"></label>
-					<form role="form" id ="myForm" class="form-inline">
+				<form role="form" id ="myForm" class="form-inline">
      					<div id="myRepeatingFields">
          					<div class="entry inline-form col-xs-12">
-               				 	<label for="Profession">Column Name : </label>
+               				 	<label for="Profession">Column Value : </label>
 						        <select name="fields" class="form-control">
-						        	<option value="Column 1">Column 1</option>
-						            <option value="Column 2">Column 2</option>
-						            <option value="Column 3">Column 3</option>
-						            <option value="Column 4">Column 4</option>
-						            <option value="Column 5">Column 5</option>
+						        	<option value="value">value</option>
+						            <option value="valuenum">valuenum</option>
+						            <!--<option value="Column 3">Column 3</option>-->
+						            <!--<option value="Column 4">Column 4</option>-->
+						            <!--<option value="Column 5">Column 5</option>-->
 						        </select>
 						        <label for="Profession">Logical Operation : </label>
                 				<select name="fields2" class="form-control">
@@ -52,11 +52,12 @@
            					</div>
       					</div> 
                 		<button type="button" class="btn btn-success btn-lg btn-show">Submit</button>
- 					</form>
+ 					</form>					
 				<br>
 				<small>Press <span class="glyphicon glyphicon-plus gs"></span> for another field</small>
 			</div>
 		</div>
+		
 		<script>
 			$(function()
 			{
@@ -94,7 +95,7 @@
 					var search_word ="NEGATIVE";
 				    var qurl="/";
 				    var js_data = JSON.stringify(arr);	
-					$.ajax({
+					$.ajax({    
 								url: '/',
 								data: js_data,
 								type: 'POST',
@@ -109,16 +110,23 @@
 							}).done(function(data) { 
 								console.log(data)
 								console.log(data.valueNum)
-								console.log(data[0]["Value"])
 								var tbl=$("<table/>").attr("id","mytable");
     							$("#div1").append(tbl);
     							for(var i=0;i<data.length;i++)
 							    {
 							        var tr="<tr>";
-							        var td1="<td>"+data[i]["Value"]+"</td>";
-							        var td2="<td>"+data[i]["valueNum"]+"</td>";
-
-							       $("#mytable").append(tr+td1+td2); 
+									var td1="<td>"+data[i]["ROW_ID"]+"</td>";
+									var td2="<td>"+data[i]["PERSON_ID"]+"</td>";
+									var td3="<td>"+data[i]["ENCOUNTER_ID"]+"</td>";
+									var td4="<td>"+data[i]["CONTRIBUTOR_SYSTEM"]+"</td>";
+									var td5="<td>"+data[i]["CHARTTIME"]+"</td>";
+									var td6="<td>"+data[i]["Value"]+"</td>";
+									var td7="<td>"+data[i]["VALUENUM"]+"</td>";
+									var td8="<td>"+data[i]["VALUEUOM"]+"</td>";
+									var td9="<td>"+data[i]["NORMAL_LOW"]+"</td>";
+									var td10="<td>"+data[i]["NORMAL_HIGH"]+"</td>";
+							        var td11="<td>"+data[i]["FLAG"]+"</td>";
+							       $("#mytable").append(tr+td1+td2+td3+td4+td5+td6+td7+td8+td9+td10+td11); 
 
 							    } 
       						});
