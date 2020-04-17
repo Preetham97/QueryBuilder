@@ -12,6 +12,14 @@
 			{
 				font-size: 12px;
 			}
+
+			table {
+			  width: 100%;
+			}
+
+			table, th, td {
+			  border: 1px solid black;
+			}
 		</style>
 	</head>
 	<body>
@@ -56,6 +64,23 @@
 				<br>
 				<small>Press <span class="glyphicon glyphicon-plus gs"></span> for another field</small>
 			</div>
+			<br><br>
+			<table id="myTable">
+				<tr>
+					<th id="ROW_ID">ROW_ID</th>
+					<th id="PERSON_ID">PERSON_ID</th>
+					<th id="ENCOUNTER_ID">ENCOUNTER_ID</th>
+					<th id="CONTRIBUTOR_SYSTEM">CONTRIBUTOR_SYSTEM</th>
+					<th id="CHARTTIME">CHARTTIME</th>
+					<th id="VALUE">Value</th>
+					<th id="VALUENUM">VALUENUM</th>
+					<th id="VALUEUOM">VALUEUOM</th>
+					<th id="NORMAL_LOW">NORMAL_LOW</th>
+					<th id="NORMAL_HIGH">NORMAL_HIGH</th>
+					<th id="FLAG">FLAG</th>
+				</tr>
+			</table>
+			<br>
 		</div>
 		
 		<script>
@@ -82,7 +107,7 @@
 				$(document).on('click', '.btn-show', function()
 				{
 					var x = document.getElementById("myForm").elements.length;
-					document.getElementById("demo").innerHTML = "Found " + x + " elements in the form.";
+					//document.getElementById("demo").innerHTML = "Found " + x + " elements in the form.";
 					var i;
 					var z;
 					var arr = [];
@@ -102,7 +127,7 @@
 								dataType : 'json',
 								contentType: 'application/json',
 								success: function(response) {
-									document.getElementById("demo1").innerHTML = arr;
+									console.log(arr);
 								},
 								error: function(error) {
 									console.log(error);
@@ -110,24 +135,33 @@
 							}).done(function(data) { 
 								console.log(data)
 								console.log(data.valueNum)
-								var tbl=$("<table/>").attr("id","mytable");
-    							$("#div1").append(tbl);
     							for(var i=0;i<data.length;i++)
-							    {
-							        var tr="<tr>";
-									var td1="<td>"+data[i]["ROW_ID"]+"</td>";
-									var td2="<td>"+data[i]["PERSON_ID"]+"</td>";
-									var td3="<td>"+data[i]["ENCOUNTER_ID"]+"</td>";
-									var td4="<td>"+data[i]["CONTRIBUTOR_SYSTEM"]+"</td>";
-									var td5="<td>"+data[i]["CHARTTIME"]+"</td>";
-									var td6="<td>"+data[i]["Value"]+"</td>";
-									var td7="<td>"+data[i]["VALUENUM"]+"</td>";
-									var td8="<td>"+data[i]["VALUEUOM"]+"</td>";
-									var td9="<td>"+data[i]["NORMAL_LOW"]+"</td>";
-									var td10="<td>"+data[i]["NORMAL_HIGH"]+"</td>";
-							        var td11="<td>"+data[i]["FLAG"]+"</td>";
-							       $("#mytable").append(tr+td1+td2+td3+td4+td5+td6+td7+td8+td9+td10+td11); 
-
+							    {	
+									var table = document.getElementById("myTable");
+									var row = table.insertRow(-1);
+									var cell0 = row.insertCell(0);
+									var cell1 = row.insertCell(1);
+									var cell2 = row.insertCell(2);
+									var cell3 = row.insertCell(3);
+									var cell4 = row.insertCell(4);
+									var cell5 = row.insertCell(5);
+									var cell6 = row.insertCell(6);
+									var cell7 = row.insertCell(7);
+									var cell8 = row.insertCell(8);
+									var cell9 = row.insertCell(9);
+									var cell10 = row.insertCell(10);
+									//var cell11 = row.insertCell(11);									
+									cell0.innerHTML = data[i]["ROW_ID"];
+									cell1.innerHTML = data[i]["PERSON_ID"];
+									cell2.innerHTML = data[i]["ENCOUNTER_ID"];
+									cell3.innerHTML = data[i]["CONTRIBUTOR_SYSTEM"];
+									cell4.innerHTML = data[i]["CHARTTIME"];
+									cell5.innerHTML = data[i]["VALUE"];
+									cell6.innerHTML = data[i]["VALUENUM"];
+									cell7.innerHTML = data[i]["VALUEUOM"];
+									cell8.innerHTML = data[i]["NORMAL_LOW"];
+									cell9.innerHTML = data[i]["NORMAL_HIGH"];
+									cell10.innerHTML = data[i]["FLAG"];
 							    } 
       						});
       						event.preventDefault();
