@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="884912ca-66da-4d39-ab09-52a76e0273e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pgConnect.py" beforeDir="false" afterPath="$PROJECT_DIR$/pgConnect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/patientRecords.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/patientRecords.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patientRecords.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patientRecords.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JupyterTrust" id="4f3ee4df-1731-4e0f-a995-fd5929847134" />
+  <component name="ProjectId" id="1fk3fW937EEIc6JTQLddHx7neA7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CSE523\QueryBuilder_Develepment\FHR_query\QueryBuilder\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\16313\Desktop\523\QueryBuilder\static\images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Flask server.QueryBuilder">
+    <configuration name="Flask" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="QueryBuilder" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="QueryBuilder" type="Python.FlaskServer">
+      <module name="QueryBuilder" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="884912ca-66da-4d39-ab09-52a76e0273e5" name="Default Changelist" comment="" />
+      <created>1596748366331</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596748366331</updated>
+      <workItem from="1596748368267" duration="1407000" />
+      <workItem from="1596819159841" duration="12543000" />
+      <workItem from="1597026770267" duration="25454000" />
+      <workItem from="1599516830652" duration="16000" />
+      <workItem from="1599522853697" duration="1298000" />
+      <workItem from="1599681486292" duration="3295000" />
+      <workItem from="1599747353323" duration="3042000" />
+      <workItem from="1599766029314" duration="10984000" />
+      <workItem from="1599834778704" duration="9500000" />
+      <workItem from="1599845923790" duration="240000" />
+      <workItem from="1599846717908" duration="174000" />
+      <workItem from="1599846893085" duration="489000" />
+      <workItem from="1599864790309" duration="3266000" />
+      <workItem from="1599917043162" duration="22436000" />
+      <workItem from="1604098109241" duration="536000" />
+      <workItem from="1604410496243" duration="5901000" />
+      <workItem from="1604505482794" duration="22207000" />
+      <workItem from="1604543967245" duration="429000" />
+      <workItem from="1605672395381" duration="4732000" />
+      <workItem from="1605715378502" duration="9161000" />
+      <workItem from="1605730173929" duration="4280000" />
+      <workItem from="1605738603861" duration="3484000" />
+      <workItem from="1605885685251" duration="13441000" />
+      <workItem from="1605900381579" duration="588000" />
+      <workItem from="1605909973619" duration="1915000" />
+      <workItem from="1605989802129" duration="53000" />
+      <workItem from="1607030894836" duration="1951000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="426" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604535652720">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="426" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604535652720" />
+    <state x="1096" y="276" key="FileChooserDialogImpl" timestamp="1605989851291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1096" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605989851291" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/QueryBuilder$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1597295533306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>

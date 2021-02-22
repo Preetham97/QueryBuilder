@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{#    <script type="text/javascript" src="static/index.js"></script>#}
+{#    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">#}
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+{#    <link rel="stylesheet" type="text/css"#}
+{#          href="https://cdn.jsdelivr.net/jquery.query-builder/2.3.3/css/query-builder.default.min.css">#}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript"
+{#            src="https://cdn.jsdelivr.net/jquery.query-builder/2.3.3/js/query-builder.standalone.min.js"></script>#}
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    {#    custom files#}
+    <script type="text/javascript" src="static/patientRecords.js"></script>
+    <script type="text/javascript" src="static/tablesToColumns.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+
+</head>
+<body>
+<div class="topnav">
+    <a href="queryBuilder">Query Builder</a>
+    <a class="active" href="patientRecords">Patient Records</a>
+</div>
+
+<br>
+
+<div class="topnav" id="patientRecordsNav">
+{#    <a class="active" href="patientRecords">Patient Details</a>#}
+{#    <a  href="queryBuilder">Encounters</a>#}
+{#    <a  href="patientLabs">Labs</a>#}
+{#    <a  href="patientRecords">Procedures</a>#}
+
+    <button class="active">Patient Details</button>
+    <button  id="encounters">Encounters</button>
+    <button  id="lab_events">Labs</button>
+    <button  id="procedures_icd">Procedures</button>
+    <button  id="apgar_events">Apgar</button>
+    <button  id="delivery_outcomes">Delivery</button>
+    <button  id="diagnosis">Diagnosis</button>
+    <button  id="fhr_signals">Fhr Signals</button>
+
+</div>
+
+<div class="select-id">
+    <label for="birth_dt">Select Patient's Birth Date:</label>
+    <input type="date" class="date_select_id" id="birthdate-select0" name="birth_dt" value="1997-11-01">
+    "-"
+    <input type="date" class="date_select_id" id="birthdate-select1" name="birth_dt" value="1997-11-30">
+
+    <label for="patientID-select">Select a Patient:</label>
+    <select name="patientID-select" id="patientID-select">
+        <option value="379926">379926</option>
+        <option value="360532">360532</option>
+    </select>
+    <br>
+</div>
+
+<div class="select-id">
+    <label for="reg_dt_tm">Select Register Date:</label>
+    <input type="date" class="date_select_id" id="regdatedate-select0" name="reg_dt_tm" value="2006-01-01">
+    "-"
+    <input type="date" class="date_select_id" id="regdatedate-select1" name="reg_dt_tm" value="2006-01-01">
+
+{#    <label for="encntrID-select">Select a Encounter:</label>#}
+{#    <input type="text" id="encntrID-select" name="encntrID-select" value="">#}
+{#    <select id="encntrID-select1" name="encntrID-select">#}
+{#        <option value="00000">00000</option>#}
+{#    </select>#}
+
+    <label for="encntrID-select">Select Encounter ID:</label>
+    <input list="encntrID-select1" name="encntrID-select" id="encntrID-select" value="">
+    <datalist id="encntrID-select1">
+        <option value="00000">
+    </datalist>
+
+{#    <input type="text" id="encntrID-select" list="encntrIdList" name="encntrID-select" value="">#}
+{#    <datalist id="encntrIdList">#}
+{#        <option value="00000"></option>#}
+{#    </datalist>#}
+</div>
+
+
+<div id="showData_pr" class="resultHolder"></div>
+
+
+
+</body>
+</html>

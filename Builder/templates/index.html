@@ -1,0 +1,162 @@
+<html>
+<head>
+    <style>
+        .logoutLblPos {
+            position: fixed;
+            right: 20px;
+            top: 20px
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/jquery.query-builder/2.3.3/css/query-builder.default.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/jquery.query-builder/2.3.3/js/query-builder.standalone.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    {#    custom files#}
+    <script type="text/javascript" src="static/index.js"></script>
+    <script type="text/javascript" src="static/tablesToColumns.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="index">Query Builder</a>
+  <a href="patientRecords">Patient Records</a>
+</div>
+
+<header>
+    <h2>Query Builder</h2>
+</header>
+
+<form align="right" name="form1" method="post" action="/logout">
+    <label class="logoutLblPos">
+        <input name="submit2" type="submit" id="submit2" value="Logout">
+    </label>
+</form>
+
+{#------Search Test-------#}
+<form name="searchForm" method="post" id="searchfilterForm">
+    <input type="text" id="searchfilterValue" name="searchfilterValue">
+    <input type="button" class="btn btn-primary" id="searchfilterFormsubmit" value="Search Tables">
+    <input type="button" class="btn btn-primary" id="searchfield-add" value="Add to Rules">
+</form>
+<form id="checkbox-field" class="checkbox-search"></form>
+{#<div id="checkbox-field" class="checkbox-search"></div>#}
+
+
+<form name="searchForm" method="post" id="searchForm">
+    <input type="text" id="searchValue" name="searchValue">
+    <input type="button" class="btn btn-primary" id="searchFormsubmit" value="Search Keywords">
+    <input type="button" class="btn btn-primary" id="searchvalue-add" value="Add to Rules">
+</form>
+<form id="checkbox-value" class="checkbox-search"></form>
+
+{#--------------#}
+
+<div id="builder"></div>
+<!-- <button class="btn btn-success" id="btn-set">Set Rules</button> -->
+<button class="btn btn-primary" id="btn-get">Run</button>
+<button class="btn btn-primary" id="btn-get-quick">Quick Run</button>
+<button class="btn btn-primary" id="btn-reset">Reset</button>
+<a href="#myModal" class="btn btn-primary" data-toggle="modal" id="btn-save">Save</a>
+<a href="#myModal-select" class="btn btn-primary" data-toggle="modal" id="btn-select">Select</a>
+<a href="#myModal-selectFields" class="btn btn-primary" data-toggle="modal" id="btn-selectFields">Select Fields</a>
+
+<form align="right" name="downloadForm" method="post" action="/download" id="downloadForm">
+    <label class="downloadForm">
+        <input type="submit" class="btn btn-primary" value="download">
+    </label>
+</form>
+<p style="padding-top: 10px;padding-bottom: 5px;padding-right: 10px"><label style="display:none;padding: 5px" id="countLable" visible="false"></label></p>
+
+<div id="showData" class="resultHolder"></div>
+
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Save your query</h4>
+            </div>
+            <div class="modal-body">
+                <form id="modalForm">
+                    <div class="form-group">
+                        <label for="inputName">QueryName</label>
+                        <input type="text" class="form-control" id="txtBoxQueryName">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputComment">Comments</label>
+                        <textarea class="form-control" id="txtBoxComments" rows="4"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="onSaveModalClick()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal-select" class="modal fade">
+    <div class="modal-dialog modal-lg" style="overflow-y: initial !important">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Select Query</h4>
+            </div>
+            <div class="modal-body" style="height: 400px;overflow-y: scroll;">
+                <div class="row">
+                    <div class="col-sm-12" id="select-query">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary"  id="bt-select" onclick="onSelectModalClick()">Select</button>
+            </div>
+        </div>
+    </div>
+</div>
+{#<div id="loader" class="loading style-2" style="display:none"><div class="loading-wheel"></div></div>#}
+
+{#modal to select fileds#}
+<div id="myModal-selectFields" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Select Fields to be displayed</h4>
+            </div>
+            <div class="modal-body">
+                <div id="selctFiledsContainer" class="checkbox-search"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="onSelectFieldsModalClick()">Select Fields and Run</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+

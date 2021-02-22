@@ -1,0 +1,138 @@
+header {
+    background-color: #31a34f;
+    padding: 2px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+table, th, td {
+    border: solid 1px #DDD;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    font: 17px Calibri;
+}
+
+#tb_show{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100% !important
+}
+
+#table-selectquery tr.tr-onclick{
+    background-color: #33BDFF ;
+}
+
+#tb_show tr.tr-onclick{
+    background-color: #33BDFF ;
+}
+
+
+#table-selectquery {
+    table-layout: fixed;
+    width: 100%;
+}
+
+#table-selectquery {
+    word-wrap: break-word;         /* All browsers since IE 5.5+ */
+    overflow-wrap: break-word;     /* Renamed property in CSS3 draft spec */
+}
+.loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+}
+.loading-wheel {
+    width: 20px;
+    height: 20px;
+    margin-top: -40px;
+    margin-left: -40px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border-width: 30px;
+    border-radius: 50%;
+    -webkit-animation: spin 1s linear infinite;
+}
+.style-2 .loading-wheel {
+    border-style: double;
+    border-color: #ccc transparent;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+.checkbox-search {
+  font-size: 15px;
+  padding: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.checkbox-selctFileds{
+    padding: 5px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav button {
+  float: left;
+    background-color: black;
+    color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav button.active {
+  background-color: #4CAF50;
+  color: white;
+}
